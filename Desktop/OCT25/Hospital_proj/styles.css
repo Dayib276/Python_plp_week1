@@ -1,0 +1,231 @@
+/* ========== GLOBAL STYLES ========== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  background-color: #f5f8fb;
+}
+
+/* ======= NAVBAR ======= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #001f3f;
+  padding: 10px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #ff9966, #ff66cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff9966;
+}
+
+/* ======= HEADER ======= */
+header {
+  background-color: #001f3f;
+  color: white;
+  padding: 25px 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  background: linear-gradient(45deg, #ff9966, #ff66cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+header p {
+  margin-top: 8px;
+}
+
+/* ======= HERO SECTION ======= */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(rgba(0,0,50,0.5), rgba(0,0,70,0.5)), 
+              url('https://images.unsplash.com/photo-1580281657521-1c1c94a1322d?auto=format&fit=crop&w=1500&q=80');
+  background-size: cover;
+  color: white;
+}
+
+.hero h3 {
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #ff9966;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hero button:hover {
+  background-color: #ff66cc;
+}
+
+/* ======= SPECIALISTS ======= */
+h2 {
+  color: #001f3f;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2rem;
+}
+
+.specialists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 40px 20px;
+}
+
+.doctor {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.doctor:hover {
+  transform: translateY(-5px);
+}
+
+.doctor img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.doctor h3 {
+  color: #001f3f;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.doctor p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+/* ======= APPOINTMENT ======= */
+.appointment {
+  background-color: #001f3f;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.appointment form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.appointment label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 600;
+}
+
+.appointment input,
+.appointment select,
+.appointment textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.appointment button {
+  background-color: #ff9966;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.appointment button:hover {
+  background-color: #ff66cc;
+}
+
+/* ======= FOOTER ======= */
+footer {
+  background-color: #001f3f;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: #001f3f;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    display: none;
+  }
+
+  .navbar.active .nav-links {
+    display: flex;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  .specialists {
+    flex-direction: column;
+    align-items: center;
+  }
+}
